@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <title> REGISTRASI </title>
@@ -33,7 +33,7 @@
   color:white;
   margin-left: 5px;
   margin-right: 5px;
-  float: right;
+  float: left;
 
 }
 
@@ -51,12 +51,13 @@
           <input type="hidden" value="" name="filename" id="filename">
           <div class="input-box">
             <label for="nama" class="form-label">عنوان الكتاب</label>
-            <input type="text" id="nama" name="عنوان_الكتاب" class="form-input" placeholder="Masukan nama lengkap anda" required>
+            <input type="text" id="nama" name="عنوان_الكتاب" class="form-input" 
+            placeholder="ادخلي عنوان الكتاب او الرواية" required>
           </div>
 
 <div class="input-box">
             <label for="email" class="form-label">اسم الكاتب</label>
-            <input type="text" id="email" name="اسم_الكاتب" class="form-input" placeholder="Masukan email anda " required>
+            <input type="text" id="email" name="اسم_الكاتب" class="form-input" placeholder="ادخلي اسم الكاتب" required>
           </div>
 
 
@@ -67,35 +68,47 @@
 
           <div class="input-box">
             <label for="tempat_lahir" class="form-label">عدد الصفحات</label>
-            <input  type="text" id="tempat_lahir" name="عدد_الصفحات" class="form-input" placeholder="Masukan tempat lahir anda" required>
+            <input  type="text" id="tempat_lahir" name="عدد_الصفحات" class="form-input" placeholder="ادخلي عدد الصفحات" required>
           </div>
 
           <div class="input-box">
             <label for="alamat" class="form-label">النوع</label>
-            <input type="text"  id="alamat" name="النوع" class="form-input" placeholder="Masukan alamat anda" required>
+            <input type="text"  id="alamat" name="النوع" class="form-input" placeholder="ادخلي نوع الرواية او الكتاب" required>
           </div>
 
           
           <div class="input-box">
             <label for="kontak" class="form-label">تاريخ الاصدار</label>
-            <input  type="text" id="kontak" name="تاريخ_الاصدار" class="form-input" placeholder="Masukan nomor telepon anda " required>
+            <input  type="text" id="kontak" name="تاريخ_الاصدار" class="form-input" placeholder="ادخلي ادخلي تاريخ صدور الكتاب او الرواية" required>
           </div>
 
          <div class="input-box">
             <label for="kontak" class="form-label">التقييم</label>
-            <input  type="text" id="kontak" name="التقييم" class="form-input" placeholder="Masukan nomor telepon anda " required>
+            <input  type="text" id="kontak" name="التقييم" class="form-input" 
+            placeholder="ادخلي تقييمك (عدد النجوم من 1 الى 5)" required>
           </div>
           
           
           <div class="input-box">
             <label for="kontak" class="form-label">الملخص</label>
-            <input  type="text" id="kontak" name="الملخص" class="form-input" placeholder="Masukan nomor telepon anda " required>
+            <input  type="text" id="kontak" name="الملخص" class="form-input" placeholder="ادخلي ملخصا للكتاب او الرواية" required>
           </div>
           
           <div class="input-box">
             <label for="kontak" class="form-label">مراجعتي للكتاب</label>
-            <input  type="text" id="kontak" name="مراجعتي" class="form-input" placeholder="Masukan nomor telepon anda " required>
+           
+            
+            <textarea id="kontak" name="مراجعتي" rows="5" cols="33" class="form-input" placeholder="ادخلي مراجعتك للكتاب او الرواية" required></textarea>
+            
+            
           </div>
+          
+          
+          
+          
+          
+          
+          
           
           
            <div class="button" style="width: 100%;">
@@ -105,7 +118,7 @@
             <span id="successMessage" style="display: none;">تم الارسال بنجاح!</span>
             </div>
             
-            <button class="form-btn" type="button" id="submitButton" onclick="submitAndClearForm();">Send Request</button>
+            <button class="form-btn" type="button" id="submitButton" onclick="submitAndClearForm();">إرسال المراجعة</button>
             
             
           </div>

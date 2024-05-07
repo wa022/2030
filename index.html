@@ -46,7 +46,6 @@
       display: inline-block; /* عرض كعنصر مستطيل */
       text-align: center; /* محاذاة النص في المنتصف */
       margin-bottom: 20px;
-
     }
    
     .custom-file-upload:hover {
@@ -105,7 +104,7 @@
           </div>
           <div class="input-box">
             <label for="molakhas" class="form-label">الملخص</label>
-            <input type="text" id="molakhas" name="الملخص" class="form-input" placeholder="ادخلي ملخصا للكتاب او الرواية" required>
+             <textarea id="molakhas" name="الملخص" rows="5" cols="33" class="form-input" placeholder="ادخلي ملخصا للكتاب او الرواية" required></textarea>
           </div>
           <div class="input-box">
             <label for="review" class="form-label">مراجعتي للكتاب</label>
@@ -208,6 +207,7 @@
           successMessage.style.display = 'block';
           setTimeout(function() {
             successMessage.style.display = 'none';
+            window.location.reload(); // إعادة تحميل الصفحة بعد إرسال النموذج ونجاحه
           }, 3000);
         })
         .catch(error => {
@@ -218,9 +218,6 @@
       };
       reader.readAsDataURL(file);
     }
-    
-    
-    
   </script>
 </body>
 </html>

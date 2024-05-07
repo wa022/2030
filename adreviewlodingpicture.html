@@ -68,7 +68,7 @@
 
     /* تطبيق الحركة الدورانية للصورة */
     .loading-image {
-       width: 30px;
+      width: 30px;
       height: 30px;
       animation: spin 2s linear infinite;
     }
@@ -126,19 +126,21 @@
             <textarea id="review" name="مراجعتي" rows="5" cols="33" class="form-input" placeholder="ادخلي مراجعتك للكتاب او الرواية" required></textarea>
           </div>
           <div class="button" style="width: 100%;">
-            <div class="msg-sending" style="text-align: center;">
-              <span id="processingMessage" style="display: none;">المرجو الانتظار يتم ارسال المراجعة ...</span>
-              <span id="successMessage" style="display: none;">تم الارسال بنجاح!</span>
-            </div>
+            
             <button class="form-btn" type="button" id="submitButton" onclick="submitAndClearForm();">إرسال المراجعة</button>
           </div>
         </form>
       </div>
     </div>
   </div>
-  <div id="cover" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.7); z-index: 999;">
+  <div id="cover" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #f5f2e6 /* rgba(255, 255, 255, 0.7)*/; z-index: 999;">
+  
+
+  
     <!-- هنا تظهر الصورة التي تدور بسلاسة -->
     <img src="https://wa022.github.io/2028/loader.png" alt="جاري التحميل..." style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); animation: spin 2s linear infinite;" class="loading-image">
+    <span id="processingMessage" style="display: none; position: absolute; text-align: center; bottom: 50px; left: 50%; transform: translateX(-50%);">المرجو الانتظار يتم ارسال المراجعة ...</span>
+    <span id="successMessage" style="display: none; text-align: center; position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%);">تم الارسال بنجاح!</span>
   </div>
   <script>
     var input = document.getElementById("image_uploads");

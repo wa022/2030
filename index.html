@@ -21,6 +21,7 @@
 .form-input{
     margin-top: 10px;
     margin-bottom: 10px;
+    text-align: right;
 }
 .msg-sending {
     margin-top: 10px;
@@ -45,48 +46,63 @@
   <div class="container">
     <div class="content">
       <div class="user-details">
-        <form id="uploadForm" action="https://script.google.com/macros/s/AKfycbyaPiBpRdHQeJBuJ7bFZBSQ2ki12n82rZwG2dEzgXGQqMzfg0Y35eOhfdveKVVbdTbS/exec" method="POST"  style="color: white;margin-left: 50px;margin-right: 50px;margin-bottom: 50px;">
+        <form id="uploadForm" action="https://script.google.com/macros/s/AKfycbyaPiBpRdHQeJBuJ7bFZBSQ2ki12n82rZwG2dEzgXGQqMzfg0Y35eOhfdveKVVbdTbS/exec" method="POST"  style="color: white;margin-left: 80px;margin-right: 80px;margin-bottom: 60px;margin-top: 50px;text-align: right;">
           <input type="hidden" value="" name="fileContent" id="fileContent">
           <input type="hidden" value="" name="filename" id="filename">
           <div class="input-box">
-            <label for="nama" class="form-label">Name :</label>
-            <input type="text" id="nama" name="Name" class="form-input" placeholder="Masukan nama lengkap anda" required>
+            <label for="nama" class="form-label">عنوان الكتاب</label>
+            <input type="text" id="nama" name="عنوان_الكتاب" class="form-input" placeholder="Masukan nama lengkap anda" required>
           </div>
 
 <div class="input-box">
-            <label for="email" class="form-label">Email address :</label>
-            <input type="text" id="email" name="email" class="form-input" placeholder="Masukan email anda " required>
+            <label for="email" class="form-label">اسم الكاتب</label>
+            <input type="text" id="email" name="اسم_الكاتب" class="form-input" placeholder="Masukan email anda " required>
           </div>
 
 
  <div class="input-box">
-            <label for="file" class="form-label">Photo of the subject(s) :</label>
-            <input class="form-input" required id="attach" name="Photo" type="file"/>
+            <label for="file" class="form-label">صورة الغلاف</label>
+            <input style="" class="form-input" required id="attach" name="Photo" type="file"/>
           </div>
 
           <div class="input-box">
-            <label for="tempat_lahir" class="form-label">Subject of portrait :</label>
-            <input  type="text" id="tempat_lahir" name="Subject" class="form-input" placeholder="Masukan tempat lahir anda" required>
+            <label for="tempat_lahir" class="form-label">عدد الصفحات</label>
+            <input  type="text" id="tempat_lahir" name="عدد_الصفحات" class="form-input" placeholder="Masukan tempat lahir anda" required>
           </div>
 
           <div class="input-box">
-            <label for="alamat" class="form-label">Background description :</label>
-            <input type="text"  id="alamat" name="Background" class="form-input" placeholder="Masukan alamat anda" required>
+            <label for="alamat" class="form-label">النوع</label>
+            <input type="text"  id="alamat" name="النوع" class="form-input" placeholder="Masukan alamat anda" required>
           </div>
 
           
           <div class="input-box">
-            <label for="kontak" class="form-label">Text elements :</label>
-            <input  type="text" id="kontak" name="text" class="form-input" placeholder="Masukan nomor telepon anda " required>
+            <label for="kontak" class="form-label">تاريخ الاصدار</label>
+            <input  type="text" id="kontak" name="تاريخ_الاصدار" class="form-input" placeholder="Masukan nomor telepon anda " required>
           </div>
 
-         
-
+         <div class="input-box">
+            <label for="kontak" class="form-label">التقييم</label>
+            <input  type="text" id="kontak" name="التقييم" class="form-input" placeholder="Masukan nomor telepon anda " required>
+          </div>
+          
+          
+          <div class="input-box">
+            <label for="kontak" class="form-label">الملخص</label>
+            <input  type="text" id="kontak" name="الملخص" class="form-input" placeholder="Masukan nomor telepon anda " required>
+          </div>
+          
+          <div class="input-box">
+            <label for="kontak" class="form-label">مراجعتي للكتاب</label>
+            <input  type="text" id="kontak" name="مراجعتي" class="form-input" placeholder="Masukan nomor telepon anda " required>
+          </div>
+          
+          
            <div class="button" style="width: 100%;">
            
            <div class="msg-sending" style="text-align: center;">
-           <span id="processingMessage" style="display: none;">Sedang Diproses...</span>
-            <span id="successMessage" style="display: none;">Data Terkirim!</span>
+           <span id="processingMessage" style="display: none;">المرجو الانتظار يتم ارسال المراجعة ...</span>
+            <span id="successMessage" style="display: none;">تم الارسال بنجاح!</span>
             </div>
             
             <button class="form-btn" type="button" id="submitButton" onclick="submitAndClearForm();">Send Request</button>
